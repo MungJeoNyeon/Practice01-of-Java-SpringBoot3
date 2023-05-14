@@ -1,6 +1,5 @@
 package me.moonjounghyun.springbootdeveloper.controller;
 
-
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.stereotype.Controller;
@@ -14,17 +13,17 @@ import java.util.List;
 public class ExampleController {
 
     @GetMapping("/thymeleaf/example")
-    public String thymeleafExample(Model model) { // 뷰로 데이터를 넘겨주는 모델 객체
+    public String thymeleafExample(Model model) {
         Person examplePerson = new Person();
         examplePerson.setId(1L);
         examplePerson.setName("홍길동");
         examplePerson.setAge(11);
-        examplePerson.setHobbies(List.of("운동", "독서/"));
+        examplePerson.setHobbies(List.of("운동", "독서"));
 
-        model.addAttribute("person", examplePerson); // Person 객체 저장
+        model.addAttribute("person", examplePerson);
         model.addAttribute("today", LocalDate.now());
 
-        return "example"; // example.html라는 뷰 조회
+        return "example";
     }
 
     @Setter
@@ -36,3 +35,4 @@ public class ExampleController {
         private List<String> hobbies;
     }
 }
+
