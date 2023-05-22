@@ -35,10 +35,11 @@ public class OAuth2SuccessHandler extends SimpleUrlAuthenticationSuccessHandler 
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException {
         OAuth2User oAuth2User = (OAuth2User) authentication.getPrincipal();
+        //User user = userService.findByEmail(getEmailAttribute(oAuth2User));
         User user = userService.findByEmail((String) oAuth2User.getAttributes().get("email"));
 
         String refreshToken = tokenProvider.generateToken(user, REFRESH_TOKEN_DURATION);
-        saveRefreshToken(user.getId(), refreshToken);
+        saveOrUpdateRefreshToken(user.getId(), refreshToken);
         addRefreshTokenToCookie(request, response, refreshToken);
 
         String accessToken = tokenProvider.generateToken(user, ACCESS_TOKEN_DURATION);
@@ -49,7 +50,10 @@ public class OAuth2SuccessHandler extends SimpleUrlAuthenticationSuccessHandler 
         getRedirectStrategy().sendRedirect(request, response, targetUrl);
     }
 
-    private void saveRefreshToken(Long userId, String newRefreshToken) {
+//    private String getEmailAttribute(OAuth2User oAuth2User) {
+//        return oAuth2User.getAttribute("email");
+//    }
+    private void saveOrUpdateRefreshToken(Long userId, String newRefreshToken) {
         RefreshToken refreshToken = refreshTokenRepository.findByUserId(userId)
                 .map(entity -> entity.update(newRefreshToken))
                 .orElse(new RefreshToken(userId, newRefreshToken));
