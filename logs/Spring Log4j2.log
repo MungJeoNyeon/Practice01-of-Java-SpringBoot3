@@ -1,0 +1,469 @@
+2023/05/22 15:17:46,753 [INFO ]  [org.springframework.boot.StartupInfoLogger] [main] Starting SpringBootDeveloperApplication using Java 17.0.7 with PID 18620 (C:\Users\moonj\IdeaProjects\springboot-developer\build\classes\java\main started by moonj in C:\Users\moonj\IdeaProjects\springboot-developer)
+2023/05/22 15:17:46,769 [INFO ]  [org.springframework.boot.SpringApplication] [main] No active profile set, falling back to 1 default profile: "default"
+2023/05/22 15:17:49,939 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023/05/22 15:17:49,942 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [main] Starting service [Tomcat]
+2023/05/22 15:17:49,942 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [main] Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023/05/22 15:17:50,160 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [main] Initializing Spring embedded WebApplicationContext
+2023/05/22 15:17:50,245 [INFO ]  [com.zaxxer.hikari.HikariDataSource] [main] HikariPool-1 - Starting...
+2023/05/22 15:17:50,644 [INFO ]  [com.zaxxer.hikari.pool.HikariPool] [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2023/05/22 15:17:50,646 [INFO ]  [com.zaxxer.hikari.HikariDataSource] [main] HikariPool-1 - Start completed.
+2023/05/22 15:17:50,866 [INFO ]  [org.hibernate.jpa.internal.util.LogHelper] [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023/05/22 15:17:51,017 [INFO ]  [org.hibernate.Version] [main] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023/05/22 15:17:51,286 [WARN ]  [org.hibernate.boot.internal.MetadataBuilderImpl$MetadataBuildingOptionsImpl] [main] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023/05/22 15:17:51,552 [INFO ]  [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023/05/22 15:17:52,681 [INFO ]  [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023/05/22 15:17:55,105 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [main] Starting ProtocolHandler ["http-nio-8080"]
+2023/05/22 15:17:55,177 [INFO ]  [org.springframework.boot.StartupInfoLogger] [main] Started SpringBootDeveloperApplication in 9.02 seconds (process running for 11.615)
+2023/05/22 15:18:15,156 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023/05/22 15:18:15,317 [INFO ]  [me.moonjounghyun.springbootdeveloper.controller.UserViewController] [http-nio-8080-exec-1] Login
+2023/05/22 15:18:37,680 [INFO ]  [me.moonjounghyun.springbootdeveloper.config.oauth.OAuth2UserCustomService] [http-nio-8080-exec-6] CustomService OAuth2User loadUser userRequest -> org.springframework.security.oauth2.client.userinfo.OAuth2UserRequest@7652d25
+2023/05/22 15:18:37,682 [ERROR]  [me.moonjounghyun.springbootdeveloper.config.oauth.OAuth2UserCustomService] [http-nio-8080-exec-6] OAuth2 authentication error
+org.springframework.security.oauth2.core.OAuth2AuthenticationException: [missing_user_info_uri] Missing required UserInfo Uri in UserInfoEndpoint for Client Registration: kakao
+	at org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService.loadUser(DefaultOAuth2UserService.java:96) ~[spring-security-oauth2-client-6.0.1.jar:6.0.1]
+	at me.moonjounghyun.springbootdeveloper.config.oauth.OAuth2UserCustomService.loadUser(OAuth2UserCustomService.java:29) ~[main/:?]
+	at org.springframework.security.oauth2.client.authentication.OAuth2LoginAuthenticationProvider.authenticate(OAuth2LoginAuthenticationProvider.java:117) ~[spring-security-oauth2-client-6.0.1.jar:6.0.1]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182) ~[spring-security-core-6.0.1.jar:6.0.1]
+	at org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter.attemptAuthentication(OAuth2LoginAuthenticationFilter.java:195) ~[spring-security-oauth2-client-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:231) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:181) ~[spring-security-oauth2-client-6.0.1.jar:6.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:351) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at java.lang.Thread.run(Thread.java:833) ~[?:?]
+2023/05/22 15:18:37,782 [INFO ]  [me.moonjounghyun.springbootdeveloper.controller.UserViewController] [http-nio-8080-exec-7] Login
+2023/05/22 15:20:46,073 [INFO ]  [org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl] [SpringApplicationShutdownHook] HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023/05/22 15:20:46,248 [INFO ]  [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023/05/22 15:20:46,261 [INFO ]  [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023/05/22 15:20:51,786 [INFO ]  [org.springframework.boot.StartupInfoLogger] [main] Starting SpringBootDeveloperApplication using Java 17.0.7 with PID 16968 (C:\Users\moonj\IdeaProjects\springboot-developer\build\classes\java\main started by moonj in C:\Users\moonj\IdeaProjects\springboot-developer)
+2023/05/22 15:20:51,789 [INFO ]  [org.springframework.boot.SpringApplication] [main] No active profile set, falling back to 1 default profile: "default"
+2023/05/22 15:20:54,781 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023/05/22 15:20:54,782 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [main] Starting service [Tomcat]
+2023/05/22 15:20:54,782 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [main] Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023/05/22 15:20:54,914 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [main] Initializing Spring embedded WebApplicationContext
+2023/05/22 15:20:55,012 [INFO ]  [com.zaxxer.hikari.HikariDataSource] [main] HikariPool-1 - Starting...
+2023/05/22 15:20:55,357 [INFO ]  [com.zaxxer.hikari.pool.HikariPool] [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2023/05/22 15:20:55,359 [INFO ]  [com.zaxxer.hikari.HikariDataSource] [main] HikariPool-1 - Start completed.
+2023/05/22 15:20:55,610 [INFO ]  [org.hibernate.jpa.internal.util.LogHelper] [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023/05/22 15:20:55,734 [INFO ]  [org.hibernate.Version] [main] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023/05/22 15:20:56,030 [WARN ]  [org.hibernate.boot.internal.MetadataBuilderImpl$MetadataBuildingOptionsImpl] [main] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023/05/22 15:20:56,231 [INFO ]  [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023/05/22 15:20:57,285 [INFO ]  [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023/05/22 15:20:59,222 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [main] Starting ProtocolHandler ["http-nio-8080"]
+2023/05/22 15:20:59,303 [INFO ]  [org.springframework.boot.StartupInfoLogger] [main] Started SpringBootDeveloperApplication in 8.02 seconds (process running for 9.623)
+2023/05/22 15:21:14,353 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023/05/22 15:21:15,120 [INFO ]  [me.moonjounghyun.springbootdeveloper.config.oauth.OAuth2UserCustomService] [http-nio-8080-exec-2] CustomService OAuth2User loadUser userRequest -> org.springframework.security.oauth2.client.userinfo.OAuth2UserRequest@704739d9
+2023/05/22 15:21:15,120 [ERROR]  [me.moonjounghyun.springbootdeveloper.config.oauth.OAuth2UserCustomService] [http-nio-8080-exec-2] OAuth2 authentication error
+org.springframework.security.oauth2.core.OAuth2AuthenticationException: [missing_user_info_uri] Missing required UserInfo Uri in UserInfoEndpoint for Client Registration: kakao
+	at org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService.loadUser(DefaultOAuth2UserService.java:96) ~[spring-security-oauth2-client-6.0.1.jar:6.0.1]
+	at me.moonjounghyun.springbootdeveloper.config.oauth.OAuth2UserCustomService.loadUser(OAuth2UserCustomService.java:29) ~[main/:?]
+	at org.springframework.security.oauth2.client.authentication.OAuth2LoginAuthenticationProvider.authenticate(OAuth2LoginAuthenticationProvider.java:117) ~[spring-security-oauth2-client-6.0.1.jar:6.0.1]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182) ~[spring-security-core-6.0.1.jar:6.0.1]
+	at org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter.attemptAuthentication(OAuth2LoginAuthenticationFilter.java:195) ~[spring-security-oauth2-client-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:231) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:181) ~[spring-security-oauth2-client-6.0.1.jar:6.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:351) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at java.lang.Thread.run(Thread.java:833) ~[?:?]
+2023/05/22 15:21:15,281 [INFO ]  [me.moonjounghyun.springbootdeveloper.controller.UserViewController] [http-nio-8080-exec-3] Login
+2023/05/22 15:21:17,935 [INFO ]  [me.moonjounghyun.springbootdeveloper.controller.UserViewController] [http-nio-8080-exec-4] Login
+2023/05/22 15:21:19,586 [INFO ]  [me.moonjounghyun.springbootdeveloper.config.oauth.OAuth2UserCustomService] [http-nio-8080-exec-6] CustomService OAuth2User loadUser userRequest -> org.springframework.security.oauth2.client.userinfo.OAuth2UserRequest@6978f1ea
+2023/05/22 15:21:19,586 [ERROR]  [me.moonjounghyun.springbootdeveloper.config.oauth.OAuth2UserCustomService] [http-nio-8080-exec-6] OAuth2 authentication error
+org.springframework.security.oauth2.core.OAuth2AuthenticationException: [missing_user_info_uri] Missing required UserInfo Uri in UserInfoEndpoint for Client Registration: kakao
+	at org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService.loadUser(DefaultOAuth2UserService.java:96) ~[spring-security-oauth2-client-6.0.1.jar:6.0.1]
+	at me.moonjounghyun.springbootdeveloper.config.oauth.OAuth2UserCustomService.loadUser(OAuth2UserCustomService.java:29) ~[main/:?]
+	at org.springframework.security.oauth2.client.authentication.OAuth2LoginAuthenticationProvider.authenticate(OAuth2LoginAuthenticationProvider.java:117) ~[spring-security-oauth2-client-6.0.1.jar:6.0.1]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182) ~[spring-security-core-6.0.1.jar:6.0.1]
+	at org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter.attemptAuthentication(OAuth2LoginAuthenticationFilter.java:195) ~[spring-security-oauth2-client-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:231) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:181) ~[spring-security-oauth2-client-6.0.1.jar:6.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:351) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at java.lang.Thread.run(Thread.java:833) ~[?:?]
+2023/05/22 15:21:19,626 [INFO ]  [me.moonjounghyun.springbootdeveloper.controller.UserViewController] [http-nio-8080-exec-7] Login
+2023/05/22 15:22:58,536 [INFO ]  [org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl] [SpringApplicationShutdownHook] HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023/05/22 15:22:58,720 [INFO ]  [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023/05/22 15:22:58,739 [INFO ]  [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023/05/22 15:23:05,124 [INFO ]  [org.springframework.boot.StartupInfoLogger] [main] Starting SpringBootDeveloperApplication using Java 17.0.7 with PID 12252 (C:\Users\moonj\IdeaProjects\springboot-developer\build\classes\java\main started by moonj in C:\Users\moonj\IdeaProjects\springboot-developer)
+2023/05/22 15:23:05,129 [INFO ]  [org.springframework.boot.SpringApplication] [main] No active profile set, falling back to 1 default profile: "default"
+2023/05/22 15:23:07,934 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023/05/22 15:23:07,935 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [main] Starting service [Tomcat]
+2023/05/22 15:23:07,935 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [main] Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023/05/22 15:23:08,153 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [main] Initializing Spring embedded WebApplicationContext
+2023/05/22 15:23:08,232 [INFO ]  [com.zaxxer.hikari.HikariDataSource] [main] HikariPool-1 - Starting...
+2023/05/22 15:23:08,685 [INFO ]  [com.zaxxer.hikari.pool.HikariPool] [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2023/05/22 15:23:08,687 [INFO ]  [com.zaxxer.hikari.HikariDataSource] [main] HikariPool-1 - Start completed.
+2023/05/22 15:23:08,917 [INFO ]  [org.hibernate.jpa.internal.util.LogHelper] [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023/05/22 15:23:08,991 [INFO ]  [org.hibernate.Version] [main] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023/05/22 15:23:09,323 [WARN ]  [org.hibernate.boot.internal.MetadataBuilderImpl$MetadataBuildingOptionsImpl] [main] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023/05/22 15:23:09,490 [INFO ]  [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023/05/22 15:23:10,576 [INFO ]  [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023/05/22 15:23:12,557 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [main] Starting ProtocolHandler ["http-nio-8080"]
+2023/05/22 15:23:12,619 [INFO ]  [org.springframework.boot.StartupInfoLogger] [main] Started SpringBootDeveloperApplication in 8.118 seconds (process running for 10.156)
+2023/05/22 15:23:13,438 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023/05/22 15:23:13,513 [INFO ]  [me.moonjounghyun.springbootdeveloper.controller.UserViewController] [http-nio-8080-exec-1] Login
+2023/05/22 15:23:35,477 [INFO ]  [me.moonjounghyun.springbootdeveloper.config.oauth.OAuth2UserCustomService] [http-nio-8080-exec-8] CustomService OAuth2User loadUser userRequest -> org.springframework.security.oauth2.client.userinfo.OAuth2UserRequest@497cb8ff
+2023/05/22 15:23:35,665 [INFO ]  [me.moonjounghyun.springbootdeveloper.config.oauth.OAuth2UserCustomService] [http-nio-8080-exec-8] CustomService OAuth2User loadUser user -> Name: [2798832763], Granted Authorities: [[OAUTH2_USER, SCOPE_account_email, SCOPE_profile_nickname]], User Attributes: [{id=2798832763, connected_at=2023-05-20T17:53:14Z, properties={nickname=문정현}, kakao_account={profile_nickname_needs_agreement=false, profile={nickname=문정현}, has_email=true, email_needs_agreement=false, is_email_valid=true, is_email_verified=true, email=monjh0613@kakao.com}}]
+2023/05/22 15:23:35,666 [INFO ]  [me.moonjounghyun.springbootdeveloper.config.oauth.OAuth2UserCustomService] [http-nio-8080-exec-8] getAttributes : {id=2798832763, connected_at=2023-05-20T17:53:14Z, properties={nickname=문정현}, kakao_account={profile_nickname_needs_agreement=false, profile={nickname=문정현}, has_email=true, email_needs_agreement=false, is_email_valid=true, is_email_verified=true, email=monjh0613@kakao.com}}
+2023/05/22 15:23:35,671 [INFO ]  [me.moonjounghyun.springbootdeveloper.config.oauth.OAuthAttributes] [http-nio-8080-exec-8] OAuthAttributes registrationId -> kakao
+2023/05/22 15:23:35,676 [INFO ]  [me.moonjounghyun.springbootdeveloper.config.oauth.OAuth2UserCustomService] [http-nio-8080-exec-8] CustomService OAuth2User saveOrUpdate
+2023/05/22 15:23:35,983 [INFO ]  [me.moonjounghyun.springbootdeveloper.config.oauth.OAuth2UserCustomService] [http-nio-8080-exec-8] createUser
+2023/05/22 15:23:36,031 [ERROR]  [org.apache.juli.logging.DirectJDKLog] [http-nio-8080-exec-8] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+org.springframework.dao.DataIntegrityViolationException: not-null property references a null or transient value : me.moonjounghyun.springbootdeveloper.domain.User.email
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:287) ~[spring-orm-6.0.4.jar:6.0.4]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:233) ~[spring-orm-6.0.4.jar:6.0.4]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:550) ~[spring-orm-6.0.4.jar:6.0.4]
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61) ~[spring-tx-6.0.4.jar:6.0.4]
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:242) ~[spring-tx-6.0.4.jar:6.0.4]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:152) ~[spring-tx-6.0.4.jar:6.0.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:163) ~[spring-data-jpa-3.0.1.jar:3.0.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:218) ~[spring-aop-6.0.4.jar:6.0.4]
+	at jdk.proxy2.$Proxy134.save(Unknown Source) ~[?:?]
+	at me.moonjounghyun.springbootdeveloper.config.oauth.OAuth2UserCustomService.saveOrUpdate(OAuth2UserCustomService.java:55) ~[main/:?]
+	at me.moonjounghyun.springbootdeveloper.config.oauth.OAuth2UserCustomService.loadUser(OAuth2UserCustomService.java:34) ~[main/:?]
+	at org.springframework.security.oauth2.client.authentication.OAuth2LoginAuthenticationProvider.authenticate(OAuth2LoginAuthenticationProvider.java:117) ~[spring-security-oauth2-client-6.0.1.jar:6.0.1]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182) ~[spring-security-core-6.0.1.jar:6.0.1]
+	at org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter.attemptAuthentication(OAuth2LoginAuthenticationFilter.java:195) ~[spring-security-oauth2-client-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:231) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:181) ~[spring-security-oauth2-client-6.0.1.jar:6.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.0.1.jar:6.0.1]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:351) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at java.lang.Thread.run(Thread.java:833) ~[?:?]
+Caused by: org.hibernate.PropertyValueException: not-null property references a null or transient value : me.moonjounghyun.springbootdeveloper.domain.User.email
+	at org.hibernate.engine.internal.Nullability.checkNullability(Nullability.java:111) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.engine.internal.Nullability.checkNullability(Nullability.java:55) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.action.internal.AbstractEntityInsertAction.nullifyTransientReferencesIfNotAlready(AbstractEntityInsertAction.java:119) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:68) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:653) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:283) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:264) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:322) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:340) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:286) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:192) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:122) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:184) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:129) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:53) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:737) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:721) ~[hibernate-core-6.1.6.Final.jar:6.1.6.Final]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:307) ~[spring-orm-6.0.4.jar:6.0.4]
+	at jdk.proxy2.$Proxy129.persist(Unknown Source) ~[?:?]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:610) ~[spring-data-jpa-3.0.1.jar:3.0.1]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:288) ~[spring-data-commons-3.0.1.jar:3.0.1]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:136) ~[spring-data-commons-3.0.1.jar:3.0.1]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:120) ~[spring-data-commons-3.0.1.jar:3.0.1]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516) ~[spring-data-commons-3.0.1.jar:3.0.1]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285) ~[spring-data-commons-3.0.1.jar:3.0.1]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628) ~[spring-data-commons-3.0.1.jar:3.0.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:168) ~[spring-data-commons-3.0.1.jar:3.0.1]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143) ~[spring-data-commons-3.0.1.jar:3.0.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:77) ~[spring-data-commons-3.0.1.jar:3.0.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.0.4.jar:6.0.4]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-6.0.4.jar:6.0.4]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.0.4.jar:6.0.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-6.0.4.jar:6.0.4]
+	... 68 more
+2023/05/22 15:27:12,217 [INFO ]  [org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl] [SpringApplicationShutdownHook] HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023/05/22 15:27:12,407 [INFO ]  [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023/05/22 15:27:12,441 [INFO ]  [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023/05/22 15:27:27,440 [INFO ]  [org.springframework.boot.StartupInfoLogger] [main] Starting SpringBootDeveloperApplication using Java 17.0.7 with PID 6424 (C:\Users\moonj\IdeaProjects\springboot-developer\build\classes\java\main started by moonj in C:\Users\moonj\IdeaProjects\springboot-developer)
+2023/05/22 15:27:27,446 [INFO ]  [org.springframework.boot.SpringApplication] [main] No active profile set, falling back to 1 default profile: "default"
+2023/05/22 15:27:30,272 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023/05/22 15:27:30,273 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [main] Starting service [Tomcat]
+2023/05/22 15:27:30,273 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [main] Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023/05/22 15:27:30,402 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [main] Initializing Spring embedded WebApplicationContext
+2023/05/22 15:27:30,453 [INFO ]  [com.zaxxer.hikari.HikariDataSource] [main] HikariPool-1 - Starting...
+2023/05/22 15:27:30,732 [INFO ]  [com.zaxxer.hikari.pool.HikariPool] [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2023/05/22 15:27:30,734 [INFO ]  [com.zaxxer.hikari.HikariDataSource] [main] HikariPool-1 - Start completed.
+2023/05/22 15:27:30,919 [INFO ]  [org.hibernate.jpa.internal.util.LogHelper] [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023/05/22 15:27:30,982 [INFO ]  [org.hibernate.Version] [main] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023/05/22 15:27:31,201 [WARN ]  [org.hibernate.boot.internal.MetadataBuilderImpl$MetadataBuildingOptionsImpl] [main] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023/05/22 15:27:31,415 [INFO ]  [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023/05/22 15:27:32,645 [INFO ]  [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023/05/22 15:27:34,441 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [main] Starting ProtocolHandler ["http-nio-8080"]
+2023/05/22 15:27:34,513 [INFO ]  [org.springframework.boot.StartupInfoLogger] [main] Started SpringBootDeveloperApplication in 7.871 seconds (process running for 9.878)
+2023/05/22 15:27:35,644 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023/05/22 15:27:35,752 [INFO ]  [me.moonjounghyun.springbootdeveloper.controller.UserViewController] [http-nio-8080-exec-1] Login
+2023/05/22 15:28:06,780 [INFO ]  [me.moonjounghyun.springbootdeveloper.config.oauth.OAuth2UserCustomService] [http-nio-8080-exec-8] CustomService OAuth2User loadUser userRequest -> org.springframework.security.oauth2.client.userinfo.OAuth2UserRequest@2116988c
+2023/05/22 15:28:06,891 [INFO ]  [me.moonjounghyun.springbootdeveloper.config.oauth.OAuth2UserCustomService] [http-nio-8080-exec-8] CustomService OAuth2User loadUser user -> Name: [2798832763], Granted Authorities: [[OAUTH2_USER, SCOPE_account_email, SCOPE_profile_nickname]], User Attributes: [{id=2798832763, connected_at=2023-05-20T17:53:14Z, properties={nickname=문정현}, kakao_account={profile_nickname_needs_agreement=false, profile={nickname=문정현}, has_email=true, email_needs_agreement=false, is_email_valid=true, is_email_verified=true, email=monjh0613@kakao.com}}]
+2023/05/22 15:28:06,891 [INFO ]  [me.moonjounghyun.springbootdeveloper.config.oauth.OAuth2UserCustomService] [http-nio-8080-exec-8] getAttributes : {id=2798832763, connected_at=2023-05-20T17:53:14Z, properties={nickname=문정현}, kakao_account={profile_nickname_needs_agreement=false, profile={nickname=문정현}, has_email=true, email_needs_agreement=false, is_email_valid=true, is_email_verified=true, email=monjh0613@kakao.com}}
+2023/05/22 15:28:06,898 [INFO ]  [me.moonjounghyun.springbootdeveloper.config.oauth.OAuthAttributes] [http-nio-8080-exec-8] OAuthAttributes registrationId -> kakao
+2023/05/22 15:28:06,898 [INFO ]  [me.moonjounghyun.springbootdeveloper.config.oauth.OAuth2UserCustomService] [http-nio-8080-exec-8] CustomService OAuth2User saveOrUpdate
+2023/05/22 15:28:07,251 [INFO ]  [me.moonjounghyun.springbootdeveloper.config.oauth.OAuth2UserCustomService] [http-nio-8080-exec-8] createUser
+2023/05/22 15:50:48,766 [INFO ]  [org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl] [SpringApplicationShutdownHook] HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023/05/22 15:50:48,928 [INFO ]  [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023/05/22 15:50:48,979 [INFO ]  [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023/05/22 15:53:46,775 [INFO ]  [org.springframework.boot.StartupInfoLogger] [main] Starting SpringBootDeveloperApplication using Java 17.0.7 with PID 5484 (C:\Users\moonj\IdeaProjects\springboot-developer\build\classes\java\main started by moonj in C:\Users\moonj\IdeaProjects\springboot-developer)
+2023/05/22 15:53:46,782 [INFO ]  [org.springframework.boot.SpringApplication] [main] No active profile set, falling back to 1 default profile: "default"
+2023/05/22 15:53:49,531 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023/05/22 15:53:49,531 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [main] Starting service [Tomcat]
+2023/05/22 15:53:49,532 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [main] Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023/05/22 15:53:49,696 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [main] Initializing Spring embedded WebApplicationContext
+2023/05/22 15:53:49,746 [INFO ]  [com.zaxxer.hikari.HikariDataSource] [main] HikariPool-1 - Starting...
+2023/05/22 15:53:50,100 [INFO ]  [com.zaxxer.hikari.pool.HikariPool] [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2023/05/22 15:53:50,102 [INFO ]  [com.zaxxer.hikari.HikariDataSource] [main] HikariPool-1 - Start completed.
+2023/05/22 15:53:50,311 [INFO ]  [org.hibernate.jpa.internal.util.LogHelper] [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023/05/22 15:53:50,432 [INFO ]  [org.hibernate.Version] [main] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023/05/22 15:53:50,691 [WARN ]  [org.hibernate.boot.internal.MetadataBuilderImpl$MetadataBuildingOptionsImpl] [main] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023/05/22 15:53:50,980 [INFO ]  [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023/05/22 15:53:52,242 [INFO ]  [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023/05/22 15:53:53,054 [INFO ]  [org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl] [main] HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023/05/22 15:53:53,059 [INFO ]  [com.zaxxer.hikari.HikariDataSource] [main] HikariPool-1 - Shutdown initiated...
+2023/05/22 15:53:53,062 [INFO ]  [com.zaxxer.hikari.HikariDataSource] [main] HikariPool-1 - Shutdown completed.
+2023/05/22 15:53:53,063 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [main] Stopping service [Tomcat]
+2023/05/22 15:54:45,629 [INFO ]  [org.springframework.boot.StartupInfoLogger] [main] Starting SpringBootDeveloperApplication using Java 17.0.7 with PID 19924 (C:\Users\moonj\IdeaProjects\springboot-developer\build\classes\java\main started by moonj in C:\Users\moonj\IdeaProjects\springboot-developer)
+2023/05/22 15:54:45,635 [INFO ]  [org.springframework.boot.SpringApplication] [main] No active profile set, falling back to 1 default profile: "default"
+2023/05/22 15:54:48,871 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023/05/22 15:54:48,872 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [main] Starting service [Tomcat]
+2023/05/22 15:54:48,872 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [main] Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023/05/22 15:54:48,978 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [main] Initializing Spring embedded WebApplicationContext
+2023/05/22 15:54:49,030 [INFO ]  [com.zaxxer.hikari.HikariDataSource] [main] HikariPool-1 - Starting...
+2023/05/22 15:54:49,427 [INFO ]  [com.zaxxer.hikari.pool.HikariPool] [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2023/05/22 15:54:49,432 [INFO ]  [com.zaxxer.hikari.HikariDataSource] [main] HikariPool-1 - Start completed.
+2023/05/22 15:54:49,666 [INFO ]  [org.hibernate.jpa.internal.util.LogHelper] [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023/05/22 15:54:49,785 [INFO ]  [org.hibernate.Version] [main] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023/05/22 15:54:50,047 [WARN ]  [org.hibernate.boot.internal.MetadataBuilderImpl$MetadataBuildingOptionsImpl] [main] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023/05/22 15:54:50,200 [INFO ]  [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023/05/22 15:54:51,415 [INFO ]  [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023/05/22 15:54:52,493 [INFO ]  [org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl] [main] HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023/05/22 15:54:52,507 [INFO ]  [com.zaxxer.hikari.HikariDataSource] [main] HikariPool-1 - Shutdown initiated...
+2023/05/22 15:54:52,513 [INFO ]  [com.zaxxer.hikari.HikariDataSource] [main] HikariPool-1 - Shutdown completed.
+2023/05/22 15:54:52,517 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [main] Stopping service [Tomcat]
+2023/05/22 15:56:38,884 [INFO ]  [org.springframework.boot.StartupInfoLogger] [main] Starting SpringBootDeveloperApplication using Java 17.0.7 with PID 17324 (C:\Users\moonj\IdeaProjects\springboot-developer\build\classes\java\main started by moonj in C:\Users\moonj\IdeaProjects\springboot-developer)
+2023/05/22 15:56:38,888 [INFO ]  [org.springframework.boot.SpringApplication] [main] No active profile set, falling back to 1 default profile: "default"
+2023/05/22 15:56:42,047 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023/05/22 15:56:42,048 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [main] Starting service [Tomcat]
+2023/05/22 15:56:42,048 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [main] Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023/05/22 15:56:42,184 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [main] Initializing Spring embedded WebApplicationContext
+2023/05/22 15:56:42,285 [INFO ]  [com.zaxxer.hikari.HikariDataSource] [main] HikariPool-1 - Starting...
+2023/05/22 15:56:42,685 [INFO ]  [com.zaxxer.hikari.pool.HikariPool] [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2023/05/22 15:56:42,687 [INFO ]  [com.zaxxer.hikari.HikariDataSource] [main] HikariPool-1 - Start completed.
+2023/05/22 15:56:42,892 [INFO ]  [org.hibernate.jpa.internal.util.LogHelper] [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023/05/22 15:56:43,034 [INFO ]  [org.hibernate.Version] [main] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023/05/22 15:56:43,341 [WARN ]  [org.hibernate.boot.internal.MetadataBuilderImpl$MetadataBuildingOptionsImpl] [main] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023/05/22 15:56:43,521 [INFO ]  [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023/05/22 15:56:44,789 [INFO ]  [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023/05/22 15:56:45,802 [INFO ]  [org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl] [main] HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023/05/22 15:56:45,809 [INFO ]  [com.zaxxer.hikari.HikariDataSource] [main] HikariPool-1 - Shutdown initiated...
+2023/05/22 15:56:45,812 [INFO ]  [com.zaxxer.hikari.HikariDataSource] [main] HikariPool-1 - Shutdown completed.
+2023/05/22 15:56:45,813 [INFO ]  [org.apache.juli.logging.DirectJDKLog] [main] Stopping service [Tomcat]
